@@ -28,7 +28,7 @@ formControls.forEach(formControl => {
   const errorMessageHolder = formControl.nextElementSibling;
 
   formControl.required = true;
-  formControl.setAttribute('minLength', 6);
+  formControl.setAttribute('minLength', 4);
   formControl.setAttribute('maxLength', 25);
 
   formControl.addEventListener('input', () => {
@@ -54,8 +54,8 @@ formControls.forEach(formControl => {
         errorMessageHolder.textContent = 'This field is required.'
       } else {
         formControl.classList.add('invalid');
-        if (value.length < 6) {
-          errorMessageHolder.textContent = 'Minimum amount of characters is 6.';
+        if (value.length < 4) {
+          errorMessageHolder.textContent = 'Minimum amount of characters is 4.';
         } else {
           errorMessageHolder.textContent = 'This field is incorrect.';
         }
@@ -100,7 +100,7 @@ countryFormControl.addEventListener('input', () => {
   const errorMessageHolder = countryFormControl.nextElementSibling;
   const validity = countryFormControl.checkValidity();
 
-  if (countryFormControl.value.length >= 6 && validity === false) {
+  if (countryFormControl.value.length >= 4 && validity === false) {
     errorMessageHolder.textContent = "Country name has to start with a capital letter and can only consist of letters."
   }
 
