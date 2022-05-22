@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+    <h1>basic form</h1>
+    <form id="form">
+      <div class="form-field">
+        <label for="name">Enter your email </label>
+        <input class="form-control" type="email" name="email" id="email" >
+      </div>
+      <div class="form-field">
+        <label for="country">Enter your country </label>
+        <input pattern="\b[A-Z].*?\b" class="form-control" type="text" name="country" id="country" >
+      </div>
+      <div class="form-field">
+        <label for="zip-code">Enter your zip-code </label>
+        <input class="form-control" type="text" name="zip-code" id="zip-code" >
+      </div>
+      <div class="form-field">
+        <label for="password">Enter your password </label>
+        <span class="tip">Between 6 and 25 characters, at least one uppercase letter, one lowercase letter, one number and one special character.</span>
+        <input class="form-control" type="password" name="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,25}$">
+      </div>
+      <div class="form-field">
+        <label for="confirm-password">Confirm your password </label>
+        <input  class="form-control" type="password" name="confirm-password" id="confirm-password" >
+      </div>
+      <button disabled id="submit-button" type="submit">Submit form</button>
+    </form>
+  </main>
+</body>
+
+</html>
+
+<!-- pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" -->

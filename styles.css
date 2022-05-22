@@ -1,0 +1,54 @@
+@charset "UTF-8";
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  gap: 30px;
+}
+
+form .form-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+form .form-field .tip {
+  color: gray;
+  font-size: 70%;
+}
+
+form .form-field .form-control.invalid {
+  background-color: rgba(255, 0, 0, 0.479);
+}
+
+form .form-field .form-control.valid-input {
+  background-color: rgba(0, 255, 64, 0.479);
+}
+
+form .form-field .form-control label {
+  margin-bottom: 5px;
+}
+
+form .form-field.valid-parent label::after {
+  content: "✔️";
+}
+
+form .form-field .error {
+  position: absolute;
+  width: 100vw;
+  bottom: -1.3em;
+  font-size: 80%;
+  color: red;
+}
+/*# sourceMappingURL=styles.css.map */

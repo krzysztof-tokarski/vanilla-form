@@ -1,0 +1,48 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 30px;
+
+  & .form-field {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+
+    .tip {
+      color: gray;
+      font-size: 70%;
+    }
+
+    .form-control {
+
+      &.invalid {
+        background-color: rgba(255, 0, 0, 0.479);
+      }
+
+      &.valid-input {
+        background-color: rgba(0, 255, 64, 0.479);
+      }
+
+    label {
+      margin-bottom: 5px;
+    }
+  }
+
+  &.valid-parent {
+
+    & label::after {
+      content: "✔️";
+    }
+  }
+
+  .error {
+    position: absolute;
+    width: 100vw;
+    bottom: -1.3em;
+    font-size: 80%;
+    color: red;
+  }
+
+}};
